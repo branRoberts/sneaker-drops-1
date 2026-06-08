@@ -8,12 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class StartupRunner implements CommandLineRunner {
 
-    private DropService dropService;
-
-    @Autowired
-    public StartupRunner(DropService dropService) {
-        this.dropService = dropService;
-    }
+  DropService dropService = new DropService();
 
     @Override
     public void run(String... args) throws Exception {
