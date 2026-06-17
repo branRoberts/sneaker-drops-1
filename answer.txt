@@ -1,0 +1,18 @@
+http:// = protocol (how data is sent)
+localhost = the machine (my own computer)
+8080 = the port (which program to talk to)
+/api/games = the path (which resource)
+
+127.0.0.1 is the actual IP address for localhost. They mean the same thing, localhost is just the readable version.
+
+Browser takes the name google.com
+Asks a DNS server to look up the IP address
+DNS returns something like 142.250.80.46
+Browser sends the request to that IP
+
+DNS is like a contacts app — you dial your mom but it's really calling a number. DNS does that translation for domain names.
+
+IP gets you to the right machine, but one machine runs a lot of programs. The port says which one to talk to. Like an apartment building — the street address gets you there, the unit number gets you to the right door.
+This week: port 8080 for the Spring Boot app, port 3306 for MySQL.
+
+It'll crash with something like "address already in use." The first app already claimed port 8080. The OS won't let two programs bind to the same port at the same time.
